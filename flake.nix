@@ -28,6 +28,9 @@
             ruby
             bundix
             libyaml
+            sqlite
+            libffi
+            pkg-config
           ];
       };
   });
