@@ -64,4 +64,4 @@ end
 
 gem "sorbet", "~> 0.5.11812"
 
-gem "tapioca", "~> 0.16.9"
+gem "tapioca", "~> 0.16.10"
