@@ -62,6 +62,6 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "sorbet", "~> 0.5.11812"
+gem "sorbet", "~> 0.5.11845"
 
 gem "tapioca", "~> 0.16.9"
