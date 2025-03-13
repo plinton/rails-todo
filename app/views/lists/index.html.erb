@@ -1,0 +1,32 @@
+<h1>Lists#index</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form action="<%= lists_path %>" method="post">
+        <div class="form-group">
+          <label for="list_name">Name</label>
+          <input type="text" name="list[name]" id="list_name" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Create List</button>
+    </div>
+  <div class="row">
+    <% if @lists.nil? %>
+      <div class="col-md-12">
+        <p>No lists found</p>
+      </div>
+    <% else %>
+      <% @lists.each do |list| %>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><%= list.name %></h5>
+              <p class="card-text"><%= list.description %></p>
+              <%= link_to 'Show', list_path(list), class: 'btn btn-primary' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
